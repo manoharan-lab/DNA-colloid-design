@@ -24,3 +24,5 @@ Ts = 65; % number of bases in the poly T chain
 should be changed to reflect the total length (in bases) of your ssDNA strand from the surface of the particle to the end of the sticky end  
 N_DNA = 5000; %strands per particle  
 should be changed to reflect the DNA coverage of your particle (note: this code works for relatively low coverage <~20,000 strands per particle)  
+
+This code package is based upon work supported by the National Science Foundation under grant number DMREF-1435964.
