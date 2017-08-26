@@ -37,7 +37,7 @@ check2=0;
         [del_F(tempi),info] = fourSeqReentrantBindingStrength(seqA, seqD1, seqD2, Cd1, Cd2, Xtemp(tempi), saltConc); %kcal/mol
         %del_F(tempi)
         RT = R*(Xtemp(tempi)+273);
-        K = (l/2)^2*exp(-(z/2)*del_F(tempi)/RT);
+        K = (l/2)^2*exp(-(z/2)*del_F(tempi));
         singletFraction(tempi) = (1/(2*(K*Cp)^2)) * (1+2*K*Cp-sqrt(1+4*K*Cp));
         if (check1==0 && check2==0 && singletFraction(tempi)<=0.5)
             MeltTemp1 = Xtemp(tempi)
