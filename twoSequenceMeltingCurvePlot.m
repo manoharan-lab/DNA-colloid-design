@@ -36,7 +36,7 @@ function f=twoSequenceMeltingCurvePlot(seqA, saltConc)
         [del_F(tempi),info] = twoSequenceBindingStrength(seqA, Xtemp(tempi), saltConc); %kcal/mol
         %del_F(tempi)
         RT = R*(Xtemp(tempi)+273);
-        K = (l/2)^2*exp(-(z/2)*del_F(tempi)/RT);
+        K = (l/2)^2*exp(-(z/2)*del_F(tempi));
         singletFraction(tempi) = (1/(2*(K*Cp)^2)) * (1+2*K*Cp-sqrt(1+4*K*Cp));
         if (check==0 && singletFraction(tempi)>=0.5)
             MeltTemp = Xtemp(tempi)
